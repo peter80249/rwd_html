@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body ,html{
+            margin: 0;
+            height: 100%;
+            color: #777;
+            scroll-behavior: smooth;/*上面要加,html*/
+        }
+        #area_1 {
+            /*濾鏡*/
+            -webkit-filter: saturate(0.5);
+            filter: saturate(100%);
+            /*----*/
+            background-image: url(https://www.w3schools.com/howto/img_parallax.jpg);
+            width: 100%;
+            height: 100vh;
+        }
+        #scroll_down {
+            width: 300px;
+            /*字距*/
+            letter-spacing: 6px;
+            left: calc(50% - 150px);
+        }
+        #area_2 {
+            background-color: white;
+            padding: 50px 80px;
+        }
+        #title {
+            background-color: #fff;
+            width: 80%;
+            text-align: center;
+            margin: auto;
+            font-size: 30px;
+            padding-bottom: 10px;
+            letter-spacing: 5px;
+            font-weight: bold;
+            color: black;
+        }
+        p {
+            background-color: #fff;
+            font-size: 15px;
+            line-height: 30px;
+            text-align: justify;
+        }
+        #area_3 {
+            background-image: url(https://www.w3schools.com/howto/img_parallax2.jpg);
+        }
+        #text_2 {
+            width: 100%;
+            word-wrap: break-word;
+            margin: auto;
+        }
+        #area_5 {
+            background-image: url(https://www.w3schools.com/howto/img_parallax3.jpg);
+        }
+        #text_3 {
+            width: 100%;
+            word-wrap: break-word;
+        }
+        #area_7 {
+            /*濾鏡*/
+            -webkit-filter: contrast(2);
+            filter: contrast(2);
+            /*----*/
+            background-image: url(https://www.w3schools.com/howto/img_parallax.jpg);
+            width: 100%;
+            height: 100vh;
+        }
+        #cool {
+            width: 150px;
+            left: calc(50% - 75px);
+            letter-spacing: 8px;
+        }
+        #duck {
+            width: 100px;
+            height: 100px;
+            z-index: 9999;
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            /*圓滑轉transition:1s;*/
+            animation-name: duck;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /*無限*/
+            animation-direction: alternate;
+            /*來回 */
+        }
+        #line {
+            height: 100%;
+            width: 100%;
+            border: 5px solid white;
+            border-right: 5px solid rgb(53, 50, 50);
+            border-bottom: 5px solid rgb(53, 50, 50);
+            border-radius: 50%;
+            animation: loading 1s infinite linear;
+        }
+        #photo {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            /*solid實心線 50%圓形*/
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            /*鴨子圖*/
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT-7PHEW5eBPPjBBOljyXc9oSxeTm5TUO4ggw&usqp=CAU);
+            /* 两个值 */
+            /* 第一个值指定图片的宽度，第二个值指定图片的高度 
+                background-size: 50% auto
+                background-size: 3em 25%
+                background-size: auto 6px
+                background-size: auto auto*/
+            background-position: 40% 2%;
+        }
+        @keyframes duck {
+            from {
+                left: 0;
+            }
+            to {
+                left: calc(100% - 110px);
+            }
+        }
+        @keyframes loading {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div id="areabtn">
+            <a href="#area_1" class="btn navbtnright">SCROLL DOWN</a>
+            <a href="#area_3" class="btn navbtnright">LESS HEIGHT</a>
+            <a href="#area_5" class="btn navbtnright">SCROLL UP</a>
+            <a href="#area_6" class="btn navbtnright">text_3</a>
+            <a href="#area_7" class="btn navbtnright">COOL</a>
+        </div>
+    </div>
+    <div onmouseover="getAlert(this)" id="duck">
+        <div id="line"></div>
+        <div id="photo"></div>
+    </div>
+    <!--#area$*5-->
+    <div id="area_1" class="bgimg">
+        <div id="scroll_down" class="scrolldown_cool">隱藏在鴨子:O</div>
+    </div>
+    <div id="area_2">
+        <div id="title">Parallax</div>
+        <p id="text">Parallax scrolling is a web site trend where the background content is moved at a different speed
+            than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc
+            at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis
+            blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi,
+            curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc
+            nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio.
+            Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem
+            mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante
+            augue etiam maecenas, porta porttitor placerat leo.</p>
+    </div>
+    <div id="area_3" class="bgimg area_3_5">
+        <div id="less_height" class="LESS_SCROLLUP">LESS HEIGHT</div>
+    </div>
+    <div id="area_4" class="area_4_6">
+        <div id="text_2">text_2 :Scoll up and down to...</div>
+    </div>
+    <div id="area_5" class="bgimg area_3_5">
+        <div id="scroll_up" class="LESS_SCROLLUP">SCROLL UP</div>
+    </div>
+    <div id="area_6" class="area_4_6">
+        <div id="text_3">text_3: scroll up and down to really...</div>
+    </div>
+    <div id="area_7" class="bgimg">
+        <div id="cool" class="scrolldown_cool">COOL!</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+body{
+    margin: 0;
+    width: 100vw;
+    transition: .3s;
+    display: flex;
+}
+*{
+    box-sizing: border-box;
+}
+.area_left{
+    width: 366px;
+    height: 100vh;
+    background-color: rgb(155, 158, 161);
+}
+.avatar{
+    width: 100%;
+    height: 100%;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+.logo{
+    width: 150px;
+    height: 150px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT-7PHEW5eBPPjBBOljyXc9oSxeTm5TUO4ggw&usqp=CAU);
+    background-size: cover;
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 24px;
+    height: 150px;
+}
+.img{
+    background-size: cover;
+    background-position: center;
+}
+.area_right{
+    width: 100%;
+    height: 100vh;
+    background-color: tan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0;
+}
+.area_xyz{
+    display: flex;
+    width: 960px;
+    height: 570px;
+    background-color: rgb(173, 168, 168);
+}
+.area_x{
+    height: 100%;
+    background-image: url(https://www.w3schools.com/howto/img_parallax.jpg);
+    margin-right: 5px;
+    flex:1;
+}
+.area_y{
+    height: 100%;
+    background-image: url(https://www.w3schools.com/howto/img_parallax2.jpg);
+    margin-right: 5px;
+    flex:1;
+}
+.area_z{
+    height: 100%;
+    background-image: url(https://www.w3schools.com/howto/img_parallax3.jpg);
+    flex:1;
+}.mask{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(2, 2, 2, 0.9);
+    transition: 1s;
+}
+.mask:hover{
+    opacity: 0;
+}
+/*1280*1024*/
+@media only screen and (min-width: 1040px) and (max-width: 1245px){
+    .area_xyz{
+        width: 768px;
+        height: 570px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .area_x{
+        width: 768px;
+        height: 285px;
+        margin-bottom: 5px;
+        flex: none;
+    }
+    .area_y{
+        width: 381px;
+        height: 285px;
+        margin-right: 5px;
+    }
+    .area_z{
+        width: 382px;
+        height: 285px;
+    }
+}
+/*1024*768*/
+@media only screen and (min-width: 495px) and (max-width: 1039px){
+    body{
+        flex-direction: column;
+    }
+    .area_left{
+        width: 100%;
+        height: 100px;
+    }
+    .avatar{
+        height: 100px;
+        display: block;
+        padding-top: 10px;
+        flex-direction: row;
+        padding-left: 20px;
+    }
+    .logo{
+        width: 80px;
+        height: 80px;
+        float: left;
+    } 
+    .menu{
+        height: 100px;
+        display: block;
+        flex-direction: row;
+        float: right;
+        margin-top: 26px;
+        }
+    .menu a{
+        margin-right: 20px;
+    }
+    .area_right{
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0;
+    }
+    .area_xyz{
+        width: 80vw;
+        height: 800px;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .area_x{
+        width: 80vw;
+        height: 400px;
+        margin-bottom: 5px;
+        flex: none;
+    }
+    .area_y{
+        width: 40vw;
+        height: 400px;
+        margin-right: 5px;
+    }
+    .area_z{
+        width: 40vw;
+        height: 400px;
+    }
+}
+/*375*667*/
+@media only screen and (min-width: 100px) and (max-width: 560px){
+    .area_left{
+        width: 100%;
+        height: 80px;
+    }
+    .avatar{
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        padding: 0;
+        position: relative;
+    }
+    .mb_btn{
+        display: inline-block;
+        width: 40px;
+        height: 50px;
+        background-color: darkkhaki;
+        position: absolute;
+        top: 15px;
+        left: 20px;
+    }
+    .mb_btn:hover ~ .menu{
+        display: block;
+    }
+    .logo{
+        width: 54px;
+        height: 54px;
+    }
+    .menu{
+        display: none;
+        width: 95px;
+        height: 100px;
+        position: absolute;
+        top: 45px;
+        left: 20px;
+        background-color: aqua;
+        font-size: 12px;
+    }
+    .menu :hover{
+        display: block;
+    }
+    .menu a{
+        margin-bottom: 10px;
+        display: block;
+    }
+    .area_right{
+        width: 100%;
+        height: auto;
+        padding-top: 0px;
+    }
+    .area_xyz{
+        width: 100%;
+        height: 900px;
+        background-color: burlywood;
+    }
+    .area_x{
+        width: 100%;
+        height: 300px;
+        margin-bottom: 0;
+    }
+    .area_y{
+        width: 100%;
+        height: 300px;
+        flex:none;
+    }
+    .area_z{
+        width: 100%;
+        height: 300px;
+    }
+}
